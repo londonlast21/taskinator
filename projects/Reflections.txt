@@ -1,0 +1,37 @@
+End of Week 1 Reflection:
+Key Ideas: - creating the skeleton of web pages is done using HTML
+- visually making a page look good is done using CSS
+- you can connect to Github and store local files on the cloud database for other users to edit and interact with
+-
+
+Idea Application:
+- You can build a webpage like Run Buddy using HTMl
+- I added styles to the font, colors, images, and etc. of Run Buddy using two separate CSS
+- I pushed my Run Buddy project to GitHub, where I deployed it to test live
+
+Idea Relativity:
+- HTML, CSS & Git are used in conjunction with each other to make copies of your code stored online
+
+- Github can store my projects to create a portfolio of my work
+
+Questions:
+- How do I prevent my style from changing when the size of a browser window is altered?
+--
+End of Week 2 Reflection:
+Key Ideas: -using CSS to style a page in more advanced ways including adding animations
+- using CSS grids to position objects
+- how to use shortcut for colors
+- how to adjust items to fit different screen sizes
+
+Idea application:
+- used CSS to style to Run Buddy page
+- used css grid to create te price chart
+- used color shortcuts to simplify css sheet
+- used mediaqueries to adjust for screen size differences
+
+Idea Relativity:
+-css can be used to style a page before adding javascript
+- you can have different style apply using mediaqueries to adjust for other screen sizes
+
+Questions:
+- How can I more easily position items around each other?

@@ -1,0 +1,24 @@
+Errors in HTML coding:
+1. Line 18: added indentation to <div class....
+2. Line 19: added <h1> and </h1> to define that 'Boo the Dog Fan Page' was to be an H1 
+3. Lines 22 - 34: fixed indentation to clean up code; easier to read and see what it is being applied to.
+4. Lines 36 - 56: improved spacing of text on page using <p> and </div>
+5. Line 52: fixed link by putting it inside "
+6. Line 61: added < before <img class and at the end of the link added >
+7. Line 70: removed text-center from line 71 and added it to line 70
+8. Lines 71 - 79: fixed spacing of <div> and </div>
+9. Lines 86 - 90: added <li> and </li> to list objects
+10. Line 97: deleted unncessary <br>
+11. Lines 100 - 123: fixed </div> spacing
+12. Line 56: changed "row text-center" to "row"
+13. Line 58: added "text-center" 
+14. Line 67: indented
+
+
+Errors in JavaScript coding:
+1. Line 10: removed space between last fact and "
+2. Line 15: added " around word pink
+3. respaced coding into easier to read sections
+4. added " around click for resizing functions
+
+

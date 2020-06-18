@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+}
+#red{
+    color: red;
+}
+#blue {
+    color: blue;
+}
+#green {
+    color: green;
+}
+#para1 {
+    font-size: 500%;
+}
+#para2 {
+    font-size: 50%;
+}
+#para3 {
+    text-align: center;
+}
+#para4 {
+    font-weight: bold;
+}
+#para5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+#para6 {
+    font-size: 200%;
+    font-weight: bold;
+}
+.styledFont {
+    text-align: center;
+    font-size: 125%;
+    font-style: italic;
+    font-weight: bolder;
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+}
+#styledImage {
+    width: 300px;
+    padding: 10px;
+    border: 10px solid lightskyblue;
+    background-color: goldenrod;
+}

@@ -1,0 +1,17 @@
+Job 1: Web Developer
+'Yodi' - software and digital services company in Denver, CO
+$55,000-70,000 ; remote work available
+
+Term: 'Graph QL'
+- a language for API's that performs open-source data query and manipulation. Was developed by Facebook. 
+
+Job 2: Senior PHP Developer
+'Fantasy Sports Sharks' - US; remote work only
+Salary based on qualifications
+
+Term: 'PHP'
+- "PHP: Hypertext Preprocessor"
+- mostly used for server-side coding
+- can be embedded in HTML
+-
+Job 3: 
