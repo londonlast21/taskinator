@@ -45,6 +45,9 @@ var createTaskEl = function(taskDataObj) {
         taskInfoEl.className = "task-info";
         taskInfoEl.innerHTML = "<h3 class='task-name'>" + taskDataObj.name + "</h3><span class='task-type'>" + taskDataObj.type + "</span>";
         listItemEl.appendChild(taskInfoEl);
+
+        var taskActionsEl = createTaskActions(taskIdCounter);
+        listItemEl.appendChild(taskActionsEl);
     
         // add entire list item to list
         tasksToDoEl.appendChild(listItemEl);
