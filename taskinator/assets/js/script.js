@@ -94,9 +94,6 @@ var createTaskEl = function(taskDataObj) {
         tasks.push(taskDataObj);
 
         saveTasks();
-    
-
-
 
         // add entire list item to list
         tasksToDoEl.appendChild(listItemEl);
@@ -304,21 +301,24 @@ var saveTasks = function() {
 }
 
 var loadTasks = function() {
-    //get task items from localStorage
-    localStorage.getItem("tasks");
-    
-    console.log(tasks);
+    console.log("Loading Tasks")
+    var storedTasks = JSON.parse(localStorage.getItem('tasks'));
 
-    if(!tasks) {
-        localStorage.setItem("tasks", []);
-        return false;
+    console.log("Stored Tasks");
+    console.log(storedTasks)
+
+    if(storedTasks) {
+        tasks = storedTasks
+        taskIdCounter = //get the id of the last task, +1 
+    } else {
+        tasks = []
+        localStorage.setItem('tasks', JSON.stringify([]))
     }
-    else {
-    tasks = JSON.parse(tasks);
-    };
 
-
-    // creates task eleemnts on the page
+    for(var i = 0; i < tasks.length(); i++){
+        createTaskEl(tasks[i]);
+        console.log(taska[i]);
+    }
 
 
 }

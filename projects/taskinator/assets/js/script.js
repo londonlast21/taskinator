@@ -303,24 +303,26 @@ var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-var loadTasks = function() {
-    //get task items from localStorage
-    tasks = localStorage.getItem("tasks");
+var loadTasks = JSON.parse(localStorage.getItem('tasks'));
+    console.log("loading tasks")
+    //we need to load the tasks from local storage into a temporary variable
+    var storedTasks = JSON.parse(localStorage.getItem('tasks'));
+    console.log("Stored Tasks:");
+    console.log(storedTasks);
+    //we need to check if that temporary variable has data.
+    if(storedTasks) {
+    //if it does, set the global tasks variable equal to it
+        tasks = storedTasks;
+    } else {
+        console.log("defaulting tasks")
+        tasks = [];
+        localStorage.setItem('tasks', JSON.stringify([]));
+    }
     
 
-    if(!tasks) {
-        localStorage.setItem("tasks", []);
-        return false;
-    }
-    else {
-    tasks = JSON.parse(tasks);
-    
-    }
-
-    for (i = 0; i < tasks.length; i++) {
+    //for (i = 0; i < tasks.length(); i++){
         
-        
-    }
+    //}
 
      //tasks[i]= document.taskIdCounter;
     
