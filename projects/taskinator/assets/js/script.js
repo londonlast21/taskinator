@@ -70,8 +70,8 @@ var taskFormHandler = function(event) {
 
 
 var createTaskEl = function(taskDataObj) {
-        console.log(taskDataObj);
-        console.log(taskDataObj.status);
+        //console.log(taskDataObj);
+        //console.log(taskDataObj.status);
 
         // create list item
         var listItemEl = document.createElement("li");
@@ -93,7 +93,10 @@ var createTaskEl = function(taskDataObj) {
         taskDataObj.id = taskIdCounter;
         tasks.push(taskDataObj);
     
+
+        
         saveTasks();
+        
     
 
 
@@ -103,6 +106,7 @@ var createTaskEl = function(taskDataObj) {
 
         //increase task counter for next unique id
         taskIdCounter++;
+        
 
 };
 
@@ -220,7 +224,7 @@ var taskStatusChangeHandler = function(event) {
     //find the parent taks item element based on the id
     var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
 
-    if (statusValue === "to to") {
+    if (statusValue === "to do") {
         tasksToDoEl.appendChild(taskSelected);
     }
     else if (statusValue === "in progress") {
@@ -289,6 +293,7 @@ var dropTaskHandler = function(event) {
     saveTasks();
 
 
+
     console.log(tasks);
 };
 
@@ -309,38 +314,21 @@ var loadTasks = function () {
 
     if(storedTasks) {
         //if it does, set the global tasks variable equal to it
-            tasks = [storedTasks];
+           // tasks = storedTasks;
+            //const x = tasks.length;
+            for (var i = 0; i < storedTasks.length; i++){
+                createTaskEl(storedTasks[i]);
+                console.log(storedTasks[i]);
+                
+            }
+        } else {
+          tasks = [];
         }
-
-    //console.log("loading tasks")
-    //we need to load the tasks from local storage into a temporary variable
     
-    //console.log("Stored Tasks:");
-    console.log(storedTasks);
-    //we need to check if that temporary variable has data.
-    
-
-    for (let i = 0; i < tasks.length; i++){
-
-       tasks[i].id = taskIdCounter;
-       console.log(tasks[i]);
-        var listItemEl = document.createElement('li');
-        listItemEl.className = 'task-item';
-        listItemEl.setAttribute("data-task-id", tasks[i].id);
-        listItemEl.setAttribute("draggable", true);  
-        
-       // console.log(listItemEl);
-
-        var taskInfoEl = document.createElement('div');
-        taskInfoEl.className = 'task-info';
-        taskInfoEl.innerHTML = "<h3 class='task-name'>" + tasks[i].name + 
-        "</h3><span class='task-type'>" + tasks[i].type +
-        "</span>";
-        document.getElementById("listItemEl").appendChild(taskInfoEl);
 
    }
    
-}
+
 
      
     
