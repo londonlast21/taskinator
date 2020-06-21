@@ -92,7 +92,7 @@ var createTaskEl = function(taskDataObj) {
 
         taskDataObj.id = taskIdCounter;
         tasks.push(taskDataObj);
-
+    
         saveTasks();
     
 
@@ -303,35 +303,53 @@ var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-var loadTasks = JSON.parse(localStorage.getItem('tasks'));
-    console.log("loading tasks")
-    //we need to load the tasks from local storage into a temporary variable
+var loadTasks = function () { 
+    
     var storedTasks = JSON.parse(localStorage.getItem('tasks'));
-    console.log("Stored Tasks:");
+
+    if(storedTasks) {
+        //if it does, set the global tasks variable equal to it
+            tasks = [storedTasks];
+        }
+
+    //console.log("loading tasks")
+    //we need to load the tasks from local storage into a temporary variable
+    
+    //console.log("Stored Tasks:");
     console.log(storedTasks);
     //we need to check if that temporary variable has data.
-    if(storedTasks) {
-    //if it does, set the global tasks variable equal to it
-        tasks = storedTasks;
-    } else {
-        console.log("defaulting tasks")
-        tasks = [];
-        localStorage.setItem('tasks', JSON.stringify([]));
-    }
     
 
-    //for (i = 0; i < tasks.length(); i++){
+    for (let i = 0; i < tasks.length; i++){
+
+       tasks[i].id = taskIdCounter;
+       console.log(tasks[i]);
+        var listItemEl = document.createElement('li');
+        listItemEl.className = 'task-item';
+        listItemEl.setAttribute("data-task-id", tasks[i].id);
+        listItemEl.setAttribute("draggable", true);  
         
-    //}
+       // console.log(listItemEl);
 
-     //tasks[i]= document.taskIdCounter;
+        var taskInfoEl = document.createElement('div');
+        taskInfoEl.className = 'task-info';
+        taskInfoEl.innerHTML = "<h3 class='task-name'>" + tasks[i].name + 
+        "</h3><span class='task-type'>" + tasks[i].type +
+        "</span>";
+        document.getElementById("listItemEl").appendChild(taskInfoEl);
+
+   }
+   
+}
+
+     
     
 
 
-    // creates task eleemnts on the page
+    // creates task elements on the page
 
 
-}
+//}
 
 pageContentEl.addEventListener("change", taskStatusChangeHandler);
 
