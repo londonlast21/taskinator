@@ -92,8 +92,18 @@ var createTaskEl = function(taskDataObj) {
 
         taskDataObj.id = taskIdCounter;
         tasks.push(taskDataObj);
-    
 
+        statusValue = taskDataObj.status;
+
+        if (statusValue === "to do") {
+            tasksToDoEl.appendChild(listItemEl);
+        }
+        else if (statusValue === "in progress") {
+            tasksInProgressEl.appendChild(listItemEl);
+        }
+        else if (statusValue === "completed") {
+            tasksCompletedEl.appendChild(listItemEl);
+        }
         
         saveTasks();
         
@@ -102,7 +112,7 @@ var createTaskEl = function(taskDataObj) {
 
 
         // add entire list item to list
-        tasksToDoEl.appendChild(listItemEl);
+        
 
         //increase task counter for next unique id
         taskIdCounter++;
